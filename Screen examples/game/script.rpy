@@ -3,31 +3,120 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen")
+define a = Character("Alice", color="#ff0000")
+define e = Character("Eve", color="#eaff00") 
+define n = Character("---", color="#757575")
+
+default mana = 10
+default sangre = 100
+
+define mirespuesta = 0
 
 
 # The game starts here.
 
 label start:
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
+    call calculadora("150","2","*")
 
-    scene bg room
+    n "El resultado es: [_return]"
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
+    n "Un día normal (presiona haz click para continuar)"
 
-    show eileen happy
+    show screen sc_frame_hp
 
-    # These display lines of dialogue.
+    scene bg pond1_day
+    pause 1.0
 
-    e "You've created a new Ren'Py game."
+    
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    show screen screens_manager
 
-    # This ends the game.
 
-    return
+    show alice blush at left
+    a "Hola Eve"
+    
+    show eve smile at right
+    e "Hola Alice"
+
+    show alice doubt
+    a "¿Sabes usar funciónes de programación?"
+
+    show eve surprise
+    e "Sí claro. ¿Acaso tú no?"
+
+    menu claro_que_se:
+        a "Claro que sé"
+
+        "(Es mentira)":
+            $ mirespuesta = "Sí claro"
+
+        "(Sí, pero no me acuerdo bien.)":
+            $ mirespuesta = "Sí, peeeero, hay cosas que no entiendo."
+
+    call func_responder(e,mirespuesta)
+
+    e "Pues si hay algo que no te acuerdes, pregúntame."
+
+    a "[_return]"
+
+    jump menus_frame
+
+
+
+label func_responder(_character,_respuesta):
+
+    _character "Debo responder que [_respuesta]"
+
+    return "Todo lo que diga, la mitad no lo creas y la otra mitad ponla en duda."
+
+label calculadora(operador,operando,operacion):
+    e "El cálculo será de [operador] [operacion] [operando]"
+    $ nOperador = float(operador)
+    $ nOperando = float(operando)
+    $ nResultado = 0
+
+    if(operacion == "*"):
+        $ nResultado = nOperador * nOperando
+
+    return nResultado
+
+
+
+label menus_frame:
+
+    #hide screen sc_frame_hp
+    hide screen screens_manager
+
+    hide alice
+    hide eve
+
+    show bg pond1_evening
+    with fade
+
+    pause 1.0
+
+    show alice default
+
+    show screen sc_reducir_valores
+    show screen sc_menu_reiniciar_valores
+
+    "Puedes jugar con los valores de los menus."
+
+    "Yo mientras seguiré aquí"
+
+    "Pero si sigues presionando el juego se termina."
+
+    call fn_asigna_valores(3,70)
+
+    "Puntos de mana: [mana], puntos de sangre: [sangre]"
+
+    menu dmenus:
+        "¿Seguro que quieres terminar?"
+
+        "No, quiero seguir picando botones.":
+            jump menus_frame
+        "Sí, sácame de aquí":
+            "Escucho y obedezco."
+            return
+
