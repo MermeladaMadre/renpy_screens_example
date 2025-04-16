@@ -11,13 +11,16 @@ default mana = 10
 default sangre = 100
 
 define mirespuesta = 0
-
+define is_alice_visible = False
+define my_dictionary = {}
 
 # The game starts here.
 
 label start:
 
-    call calculadora("150","2","*")
+    # call calculadora("150","2","*")
+
+    call fn_dictionary()
 
     n "El resultado es: [_return]"
 
@@ -100,6 +103,7 @@ label menus_frame:
 
     show screen sc_reducir_valores
     show screen sc_menu_reiniciar_valores
+    show screen sc_buttons
 
     "Puedes jugar con los valores de los menus."
 

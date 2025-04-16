@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/screens_manager.rpy", line 43: keyword argument 'action' appears more than once in a textbutton statement.
-    action [SetVariable("sangre"), 100), Return()]
-          ^
+File "game/fn_dictionary.rpy", line 6: invalid syntax
+            'Mana': 100}
+             ^
 
-Ren'Py Version: Ren'Py 8.3.4.24120703
-Wed Apr  9 18:30:29 2025
+File "game/fn_dictionary.rpy", line 12: invalid syntax
+            'Mana': 0}
+             ^
+
+Ren'Py Version: Ren'Py 8.3.7.25031702
+Tue Apr 15 19:43:53 2025
