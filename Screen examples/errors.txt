@@ -2,13 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/fn_dictionary.rpy", line 6: invalid syntax
-            'Mana': 100}
-             ^
-
-File "game/fn_dictionary.rpy", line 12: invalid syntax
-            'Mana': 0}
-             ^
+File "game/catalogo_de_enemigos.rpy", line 165: is not terminated with a newline. (Check strings and parenthesis.)
+                        action [        
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Tue Apr 15 19:43:53 2025
+Wed Apr 16 23:26:36 2025

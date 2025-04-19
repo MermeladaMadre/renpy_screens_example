@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/game_screens.rpy", line 48: is not terminated with a newline. (Check strings and parenthesis.)
+(Perhaps you left out a " at the end of the first line.)
+                        action Function(delete_enemigo,lst_enemigo[indx_enemigo]") 
+
+Ren'Py Version: Ren'Py 8.3.7.25031702
+Fri Apr 18 19:43:55 2025

@@ -23,23 +23,17 @@ label fn_dictionary:
                         'esbirro':esbirro}
     # key : value
 
-    # $ v1 = dict_enemigos['esqueleto']['Nombre']
-    # $ v2 = dict_enemigos['esqueleto']['Descripcion']
-    # "Mensaje: [v1] y [v2]"
+    # $ culpable = renpy.random.choice(list(dict_enemigos.keys()))
+    # $ pista1 = culpable['Descripcion']
 
-    $ lst_enemigos = ["esqueleto","orco","esbirro"]
-    # $ r = renpy.random.randint(0,2)
-    # $ v1 = dict_enemigos[lst_enemigos[r]]['Nombre']
-    # $ v2 = dict_enemigos[lst_enemigos[r]]['Descripcion']
+    # $ v1 = dict_enemigos[culpable]['Nombre']
+    # $ v2 = dict_enemigos[culpable]['Descripcion']
 
-    $ r = renpy.random.choice(lst_enemigos)
-    $ v1 = dict_enemigos[r]['Nombre']
-    $ v2 = dict_enemigos[r]['Descripcion']
-
+    # "[list(dict_enemigos.keys())]"
     
-    "Mensaje: [r] - [v1] y [v2]"
+    # "Mensaje: [r] - [v1] y [v2]"
 
-    jump fn_dictionary
+    # jump fn_dictionary
 
     menu muestradict:
         "Elige un enemigo:"

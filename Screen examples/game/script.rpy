@@ -17,7 +17,9 @@ define my_dictionary = {}
 # The game starts here.
 
 label start:
-
+    scene bg pond1_day
+    pause 1.0
+    
     # call calculadora("150","2","*")
 
     call fn_dictionary()
