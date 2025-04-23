@@ -19,21 +19,11 @@ define my_dictionary = {}
 label start:
     scene bg pond1_day
     pause 1.0
-    
-    # call calculadora("150","2","*")
-
-    call fn_dictionary()
-
-    n "El resultado es: [_return]"
 
     n "Un día normal (presiona haz click para continuar)"
 
-    show screen sc_frame_hp
-
     scene bg pond1_day
     pause 1.0
-
-    
 
     show screen screens_manager
 
@@ -45,10 +35,15 @@ label start:
     e "Hola Alice"
 
     show alice doubt
-    a "¿Sabes usar funciónes de programación?"
+    
+    menu tema:
+        a "¿Sabes usar..."
 
-    show eve surprise
-    e "Sí claro. ¿Acaso tú no?"
+        "Diccionarios?":                
+            call fn_dictionary()
+        "Funciones?":
+            show eve surprise
+            e "Sí claro. ¿Acaso tú no?"
 
     menu claro_que_se:
         a "Claro que sé"

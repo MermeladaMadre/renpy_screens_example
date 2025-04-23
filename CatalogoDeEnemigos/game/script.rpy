@@ -1,45 +1,47 @@
 ﻿#region definición de variables
-define witch = {'Tipo': "Bruja"
-    ,'imagen':"witch_idle.png"
-    ,'Nombre':"Zahia"
-    ,'HP':70
-    ,'Mana':200
-    ,'Detalles':"Descendiente de Llohorul"
-    }
 
-define skeleton = {'Tipo': "Esqueleto",'imagen':"skeleton_idle.png",'Nombre':"Iho",'HP':70,'Mana':0,'Detalles':"Su punto debil es la cuenca de los ojos."}
+init: 
+    define witch = {'Tipo': "Bruja"
+        ,'imagen':"witch_idle.png"
+        ,'Nombre':"Zahia"
+        ,'HP':70
+        ,'Mana':200
+        ,'Detalles':"Descendiente de Llohorul"
+        }
 
-define wraith = {'Tipo': "Espectro",'imagen':"wraith_idle.png",'Nombre':"Yerah",'HP':30,'Mana':200,'Detalles':"Sólo los objetos sagrados pueden causarle daño."}
+    define skeleton = {'Tipo': "Esqueleto",'imagen':"skeleton_idle.png",'Nombre':"Iho",'HP':70,'Mana':0,'Detalles':"Su punto debil es la cuenca de los ojos."}
 
-define succubus = {'Tipo': "Sucubo",'imagen':"succubus_idle.png",'Nombre':"Aihaz",'HP':100,'Mana':200,'Detalles':"Demonio femenino que aparece en sueños para seducir a hombres."}
+    define wraith = {'Tipo': "Espectro",'imagen':"wraith_idle.png",'Nombre':"Yerah",'HP':30,'Mana':200,'Detalles':"Sólo los objetos sagrados pueden causarle daño."}
 
-define daemon = {'Tipo': "Demonio",'imagen':"daemon_idle.png",'Nombre':"Llohorul",'HP':200,'Mana':200,'Detalles':"No hay detalles"}
+    define succubus = {'Tipo': "Sucubo",'imagen':"succubus_idle.png",'Nombre':"Aihaz",'HP':100,'Mana':200,'Detalles':"Demonio femenino que aparece en sueños para seducir a hombres."}
 
-default cat_enemigos = {'Bruja':witch,'Esqueleto':skeleton,'Espectro':wraith,'Sucubo':succubus,'Demonio':daemon}
+    define daemon = {'Tipo': "Demonio",'imagen':"daemon_idle.png",'Nombre':"Llohorul",'HP':200,'Mana':200,'Detalles':"No hay detalles"}
 
-default indx_enemigo = 0
-default lst_enemigo = list(cat_enemigos.keys())
-default num_enemigos = len(lst_enemigo)
-default enemigo_actual = cat_enemigos[lst_enemigo[indx_enemigo]]
-default msgn = ""
+    default cat_enemigos = {'Bruja':witch,'Esqueleto':skeleton,'Espectro':wraith,'Sucubo':succubus,'Demonio':daemon}
 
-default i_enemigo = enemigo_actual
-default i_tipo = i_enemigo['Tipo']
-default i_imagen = i_enemigo['imagen']
-default i_nombre = i_enemigo['Nombre']
-default i_hp = i_enemigo['HP']
-default i_mana = i_enemigo['Mana']
-default i_detalles = i_enemigo['Detalles']
+    default indx_enemigo = 0
+    default lst_enemigo = list(cat_enemigos.keys())
+    default num_enemigos = len(lst_enemigo)
+    default enemigo_actual = cat_enemigos[lst_enemigo[indx_enemigo]]
+    default msgn = ""
 
-default gtimer = 60 
+    default i_enemigo = enemigo_actual
+    default i_tipo = i_enemigo['Tipo']
+    default i_imagen = i_enemigo['imagen']
+    default i_nombre = i_enemigo['Nombre']
+    default i_hp = i_enemigo['HP']
+    default i_mana = i_enemigo['Mana']
+    default i_detalles = i_enemigo['Detalles']
 
-define transparent_frame = "images/transparent_frame.png"
-define mano_frame = "images/mano_frame.png"
-default status_frame = transparent_frame
+    default gtimer = 60 
 
-define statusbtn_live = "images/statusbtn_live.png"
-define statusbtn_obliterated = "images/statusbtn_obliterated.png"
-default status_btn = statusbtn_live
+    define transparent_frame = "images/transparent_frame.png"
+    define mano_frame = "images/mano_frame.png"
+    default status_frame = transparent_frame
+
+    define statusbtn_live = "images/statusbtn_live.png"
+    define statusbtn_obliterated = "images/statusbtn_obliterated.png"
+    default status_btn = statusbtn_live
 
 #endregion definición de variables
 

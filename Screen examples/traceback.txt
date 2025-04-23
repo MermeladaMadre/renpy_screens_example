@@ -3,17 +3,27 @@
 While running game code:
   File "renpy/common/00start.rpy", line 195, in script
     python:
+  File "renpy/common/00start.rpy", line 195, in script
+    python:
   File "renpy/common/00start.rpy", line 196, in <module>
     renpy.execute_default_statement(True)
-  File "game/catalogo_de_enemigos.rpy", line 48, in execute_default
-    default enemigo_actual = cat_enemigos[lst_enemigo[indx_enemigo]]
   File "game/catalogo_de_enemigos.rpy", line 48, in <module>
-    default enemigo_actual = cat_enemigos[lst_enemigo[indx_enemigo]]
 NameError: name 'indx_enemigo' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
+  File "D:\Renpy\Renpy-8\renpy-8.3.4-sdk\renpy\bootstrap.py", line 359, in bootstrap
+    renpy.main.main()
+  File "D:\Renpy\Renpy-8\renpy-8.3.4-sdk\renpy\main.py", line 652, in main
+    run(restart)
+  File "D:\Renpy\Renpy-8\renpy-8.3.4-sdk\renpy\main.py", line 148, in run
+    renpy.execution.run_context(True)
+  File "D:\Renpy\Renpy-8\renpy-8.3.4-sdk\renpy\execution.py", line 958, in run_context
+    context.run()
+  File "renpy/common/00start.rpy", line 195, in script
+    python:
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
   File "renpy/common/00start.rpy", line 195, in script
     python:
   File "D:\Renpy\Renpy-8\renpy-8.3.4-sdk\renpy\ast.py", line 834, in execute
@@ -24,15 +34,13 @@ Full traceback:
     renpy.execute_default_statement(True)
   File "D:\Renpy\Renpy-8\renpy-8.3.4-sdk\renpy\exports\statementexports.py", line 372, in execute_default_statement
     i.execute_default(start)
-  File "game/catalogo_de_enemigos.rpy", line 48, in execute_default
-    default enemigo_actual = cat_enemigos[lst_enemigo[indx_enemigo]]
+  File "game/catalogo_de_enemigos.rpyc", line 48, in execute_default
   File "D:\Renpy\Renpy-8\renpy-8.3.4-sdk\renpy\python.py", line 1211, in py_eval_bytecode
     return eval(bytecode, globals, locals)
   File "game/catalogo_de_enemigos.rpy", line 48, in <module>
-    default enemigo_actual = cat_enemigos[lst_enemigo[indx_enemigo]]
 NameError: name 'indx_enemigo' is not defined
 
 Windows-10-10.0.19041 AMD64
 Ren'Py 8.3.7.25031702
 Screen examples 1.0
-Thu Apr 17 00:05:06 2025
+Tue Apr 22 11:48:25 2025

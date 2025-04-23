@@ -1,9 +1,28 @@
 label fn_dictionary:
+
+    # Arreglo con los datos de un orco
+    $ a_orco = ["Orco",
+                "Soy feo",
+                50, 
+                100]
+
+    $ vida_orco = a_orco[2] #Ejemplo de uso
+
+    # Diccionario con los datos de un orco
     $ orco ={
         'Nombre':"Orco",
         'Descripcion':"Soy feo",
         'HP':50,
         'Mana': 100}
+
+    $ vida_orco = orco['HP'] #Ejemplo de uso
+    
+    $ orco['HP'] = 10 # Modificación de un valor
+
+    $ orco['Status'] = "Vivo" # Agregando campos
+
+    "Datos del orco: Nombre: [orco['Nombre']], HP: [orco['HP']], Estatus: [orco['Status']]"
+
 
     $ esqueleto = {
         'Nombre':"Esqueleto",
@@ -21,19 +40,6 @@ label fn_dictionary:
                         'esqueleto':esqueleto,
                         'orco':orco,
                         'esbirro':esbirro}
-    # key : value
-
-    # $ culpable = renpy.random.choice(list(dict_enemigos.keys()))
-    # $ pista1 = culpable['Descripcion']
-
-    # $ v1 = dict_enemigos[culpable]['Nombre']
-    # $ v2 = dict_enemigos[culpable]['Descripcion']
-
-    # "[list(dict_enemigos.keys())]"
-    
-    # "Mensaje: [r] - [v1] y [v2]"
-
-    # jump fn_dictionary
 
     menu muestradict:
         "Elige un enemigo:"
